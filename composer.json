@@ -2,6 +2,7 @@
     "name": "mdhesari/mysql-localhost",
     "description": "Laravel mysql localhost swap config for local development and syncing docker and local commands.",
     "type": "library",
+    "keywords": ["laravel", "mysql-localhost"],
     "license": "MIT",
     "authors": [
         {
@@ -33,7 +34,7 @@
     },
     "extra": {
         "laravel": {
-            "providers": "Mdhesari\\MysqlLocalhost\\LaravelPackageTemplateProvider"
+            "providers": "Mdhesari\\MysqlLocalhost\\MysqlLocalhostProvider"
         }
     },
     "scripts": {
