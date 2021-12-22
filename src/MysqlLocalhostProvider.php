@@ -8,11 +8,6 @@ use PDO;
 
 class MysqlLocalhostProvider extends ServiceProvider
 {
-    public function boot(): void
-    {
-        dd('hello from mysql host');
-    }
-
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'mysql-localhost');
