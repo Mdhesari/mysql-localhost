@@ -10,8 +10,6 @@ class MysqlLocalhostProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'mysql-localhost');
-
         if ($this->app->environment(['local', 'testing'])) {
             $connection = config('database.default');
             if ($connection == 'mysql') {
