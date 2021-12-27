@@ -19,6 +19,11 @@ class MysqlLocalhostProvider extends ServiceProvider
                     new PDO(sprintf("mysql:dbname=%s;host=%s;port=%s", $config['database'], $config['host'], $config['port']), $config['username'], $config['password']);
                 } catch (Exception $e) {
                     config(['database.connections.mysql.host' => '127.0.0.1']);
+
+                    // test redis
+                    if(env('MDHESARI_SHOULD_CHECK_REDIS', false)) {
+                        putenv('REDIS_HOST=127.0.0.1');
+                    }
                 }
             }
         }
